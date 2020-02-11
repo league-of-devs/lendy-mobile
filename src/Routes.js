@@ -1,7 +1,7 @@
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator, TransitionSpecs } from 'react-navigation-stack'
 
-import Login from './screens/Main'
+import Login from './Screens/Login'
 
 const Routes = createAppContainer(
   createStackNavigator({
