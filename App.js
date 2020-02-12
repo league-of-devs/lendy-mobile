@@ -1,18 +1,30 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react'
+import { StyleSheet } from 'react-native'
 import Routes from './src/Routes'
+import { SplashScreen } from 'expo'
+import * as Font from 'expo-font'
 
 export default function App() {
-  return (
-    <Routes />
-  );
-}
+  const [fontsLoaded, setFontsLoaded] = useState(false)
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  useEffect(() => {
+    SplashScreen.preventAutoHide()
+    Font.loadAsync({
+      'Boston': require('./assets/font/Boston-Regular.otf'),
+      'Boston-Bold': require('./assets/font/Boston-Bold.otf'),
+      'Boston-Semibold': require('./assets/font/Boston-SemiBold.otf'),
+      'Boston-Light': require('./assets/font/Boston-Light.otf'),
+    }).then(() => {
+      setFontsLoaded(true)
+      SplashScreen.hide()
+    })
+  }, [])
+
+
+  if (fontsLoaded)
+    return (
+      <Routes />
+    )
+
+  return null
+}
