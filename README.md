@@ -26,7 +26,8 @@
 
 ### :coffee: Credits
 
-- [@league-of-devs](https://github.com/league-of-devs)
+| [<img src="https://avatars3.githubusercontent.com/u/60491076?s=400&v=4" width=115><br><sub>@leagueofdevs</sub>](https://github.com/league-of-devs) | [<img src="https://avatars2.githubusercontent.com/u/31714350?s=460&v=4" width=115><br><sub>@developerdavi</sub>](https://github.com/developerdavi) |
+| :---: | :---: |
 
 ### :v: Contribution
 
