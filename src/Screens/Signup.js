@@ -29,7 +29,7 @@ export default function Signup({ navigation, ...props }) {
           <TextInput onChange={(v) => handleChange('cpf', v)} placeholder='CPF' style={{width: '100%'}}/>
           <TextInput onChange={(v) => handleChange('password', v)} placeholder='Senha' secureTextEntry={true} style={{width: '100%'}}/>
           <TextInput onChange={(v) => handleChange('password_repeat', v)} placeholder='Repita a senha' secureTextEntry={true} style={{width: '100%'}}/>
-          <Button style={{ width: '50%', elevation: 5 }} text='Cadastrar' color='#FFFFFFEE' />
+          <Button style={{ width: '50%' }} text='Cadastrar' color='#FFFFFFEE' />
         </KeyboardAvoidingView>
         <View style={[{ flex: 0.3, justifyContent: 'center' }]}>
           <Text style={Styles.text}>Já possui cadastro?</Text>
