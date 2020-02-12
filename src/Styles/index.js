@@ -1,9 +1,10 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, StatusBar } from 'react-native'
 import Colors from './colors.js'
 
 const Styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    paddingTop: StatusBar.currentHeight
   },
 
   logo: {
