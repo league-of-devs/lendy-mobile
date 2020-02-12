@@ -22,13 +22,13 @@ export default function Login({ navigation, ...props }) {
   return (
     <View style={[Styles.container, Styles.mainBackground]}>
       <View style={[Styles.loginForm, { flex: 1, justifyContent: 'center' }]}>
-        <KeyboardAvoidingView behavior='position'>
+        <KeyboardAvoidingView  style={{ flex: 0.7, justifyContent: 'flex-end' }} behavior='position'>
           <Logo white style={{width: '100%', transform: [ { scale: 0.7 } ]}}/>
-          <TextInput onChange={(v) => handleChange('email', v)} placeholder='E-mail' style={{width: '100%'}}/>
+          <TextInput onChange={(v) => handleChange('email', v)} placeholder='E-mail' keyboardType='email-address' style={{width: '100%'}}/>
           <TextInput onChange={(v) => handleChange('password', v)} placeholder='Senha' secureTextEntry={true} style={{width: '100%'}}/>
-          <Button style={{ width: '50%', elevation: 5 }} text='Log-in' color='#FFFFFFCC' />
+          <Button style={{ width: '50%', elevation: 5 }} text='Log-in' color='#FFFFFFEE' />
         </KeyboardAvoidingView>
-        <View style={[{ flex: 0.4, justifyContent: 'flex-end' }]}>
+        <View style={[{ flex: 0.3, justifyContent: 'center', alignContent: 'center' }]}>
           <Text style={Styles.text}>Ainda não é cadastrado?</Text>
           <Text onPress={() => navigation.push('Signup')} style={[Styles.text, Styles.link]}>Cadastre-se</Text>
         </View>
