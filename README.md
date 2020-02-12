@@ -11,14 +11,18 @@
 - [x] Splash screen
 - [x] Icon
 - [ ] Getting started
-- [ ] Login
-- [ ] Signup
+- [x] Login
+- [x] Signup
 - [ ] Home (feed)
-- [ ] Create "item"
+- [ ] Contract creation
+- [ ] Contract review
+- [ ] Receipts
+- [ ] Messages
+- [ ] Profile
 
 ### :question: Questions
 
-- What's the name for "item" (the thing users create when they ask for money)?
+- Is "Getting started" screen really a must-have?
 
 ### :coffee: Credits
 
