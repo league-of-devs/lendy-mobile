@@ -1,7 +1,8 @@
 import { createAppContainer } from 'react-navigation'
-import { createStackNavigator, TransitionSpecs } from 'react-navigation-stack'
+import { createStackNavigator } from 'react-navigation-stack'
 
 import Login from './Screens/Login'
+import Signup from './Screens/Signup'
 
 const Routes = createAppContainer(
   createStackNavigator({
@@ -10,6 +11,13 @@ const Routes = createAppContainer(
       navigationOptions: {
         headerShown: false,
         animationTypeForReplace: 'pop'
+      }
+    },
+    Signup: {
+      screen: Signup,
+      navigationOptions: {
+        headerShown: false,
+        animationTypeForReplace: 'push'
       }
     }
   })
