@@ -25,7 +25,7 @@ const Styles = StyleSheet.create({
     borderRadius: 100,
     paddingHorizontal: 20,
     fontFamily: 'Boston',
-    fontSize: 16,
+    fontSize: 18,
   },
 
   button: {
@@ -38,12 +38,12 @@ const Styles = StyleSheet.create({
     lineHeight: 45,
     color: Colors.cyan,
     fontFamily: 'Boston-Bold',
-    fontSize: 17
+    fontSize: 18
   },
 
   text: {
     fontFamily: 'Boston',
-    fontSize: 16
+    fontSize: 18
   },
 
   link: {
