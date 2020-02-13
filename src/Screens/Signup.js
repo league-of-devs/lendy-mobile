@@ -24,11 +24,10 @@ export default function Signup({ navigation, ...props }) {
       <View style={[Styles.loginForm, { flex: 1, justifyContent: 'center' }]}>
         <KeyboardAvoidingView  style={{ flex: 0.7, justifyContent: 'flex-end' }} behavior='position'>
           <Logo white style={{width: '100%', transform: [ { scale: 0.7 } ]}}/>
-          <TextInput onChange={(v) => handleChange('name', v)} placeholder='Nome completo' style={{width: '100%'}}/>
-          <TextInput onChange={(v) => handleChange('email', v)} placeholder='E-mail' keyboardType='email-address' style={{width: '100%'}}/>
-          <TextInput onChange={(v) => handleChange('cpf', v)} placeholder='CPF' style={{width: '100%'}}/>
+          <TextInput autoCapitalize='words' onChange={(v) => handleChange('name', v)} placeholder='Nome completo' style={{width: '100%'}}/>
+          <TextInput textContentType='emailAddress' autoCapitalize='none' onChange={(v) => handleChange('email', v)} placeholder='E-mail' keyboardType='email-address' style={{width: '100%'}}/>
+          <TextInput onChange={(v) => handleChange('cpf', v)} keyboardType='numeric' maxLength={11} placeholder='CPF' style={{width: '100%'}}/>
           <TextInput onChange={(v) => handleChange('password', v)} placeholder='Senha' secureTextEntry={true} style={{width: '100%'}}/>
-          <TextInput onChange={(v) => handleChange('password_repeat', v)} placeholder='Repita a senha' secureTextEntry={true} style={{width: '100%'}}/>
           <Button style={{ width: '50%' }} text='Cadastrar' color='#FFFFFFEE' />
         </KeyboardAvoidingView>
         <View style={[{ flex: 0.3, justifyContent: 'center' }]}>
