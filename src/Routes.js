@@ -1,25 +1,25 @@
-import { createAppContainer } from 'react-navigation'
+import { createAppContainer, createSwitchNavigator } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 
 import Login from './Screens/Login'
 import Signup from './Screens/Signup'
+import appStack from './Navigation/BottomBarNavigation'
+
+const authStack = createStackNavigator({
+  Login,
+  Signup
+}, {
+  defaultNavigationOptions: {
+    headerShown: false
+  }
+})
 
 const Routes = createAppContainer(
-  createStackNavigator({
-    Login: {
-      screen: Login,
-      navigationOptions: {
-        headerShown: false,
-        animationTypeForReplace: 'pop'
-      }
-    },
-    Signup: {
-      screen: Signup,
-      navigationOptions: {
-        headerShown: false,
-        animationTypeForReplace: 'push'
-      }
-    }
+  createSwitchNavigator({
+    Login: authStack,
+    Main: appStack
+  }, {
+    initialRouteName: 'Login'
   })
 )
 
