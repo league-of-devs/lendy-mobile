@@ -16,7 +16,7 @@ export default function Login({ navigation, ...props }) {
   }
 
   const handleSubmit = () => {
-    
+    navigation.navigate('Main')
   }
 
   return (
@@ -26,7 +26,7 @@ export default function Login({ navigation, ...props }) {
           <Logo white style={{width: '100%', transform: [ { scale: 0.7 } ]}}/>
           <TextInput textContentType='emailAddress' autoCapitalize='none' onChange={(v) => handleChange('email', v)} placeholder='E-mail' keyboardType='email-address' style={{width: '100%'}}/>
           <TextInput onChange={(v) => handleChange('password', v)} placeholder='Senha' secureTextEntry={true} style={{width: '100%'}}/>
-          <Button style={{ width: '50%' }} text='Log-in' color='#FFFFFFEE' />
+          <Button style={{ width: '50%' }} text='Log-in' color='#FFFFFFEE' onPress={handleSubmit} />
         </KeyboardAvoidingView>
         <View style={[{ flex: 0.3, justifyContent: 'center', alignContent: 'center' }]}>
           <Text style={Styles.text}>Ainda não é cadastrado?</Text>
