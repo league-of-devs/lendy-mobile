@@ -1,25 +1,20 @@
-import { createAppContainer, createSwitchNavigator } from 'react-navigation'
-import { createStackNavigator } from 'react-navigation-stack'
+import { createAppContainer } from 'react-navigation'
+import { createDrawerNavigator } from 'react-navigation-drawer'
 
 import Login from './Screens/Login'
 import Signup from './Screens/Signup'
-import appStack from './Navigation/BottomBarNavigation'
-
-const authStack = createStackNavigator({
-  Login,
-  Signup
-}, {
-  defaultNavigationOptions: {
-    headerShown: false
-  }
-})
+import Home from './Screens/Home'
+import Sidebar from './Navigation/Sidebar'
 
 const Routes = createAppContainer(
-  createSwitchNavigator({
-    Login: authStack,
-    Main: appStack
+  createDrawerNavigator({
+    Login,
+    Signup,
+    Main: Home
   }, {
-    initialRouteName: 'Login'
+    initialRouteName: 'Login',
+    headerMode: '',
+    contentComponent: Sidebar
   })
 )
 
