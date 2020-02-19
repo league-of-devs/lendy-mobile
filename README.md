@@ -13,9 +13,9 @@
 - [ ] Getting started
 - [x] Login
 - [x] Signup
-- [ ] Home (feed)
-- [ ] Contract creation
-- [ ] Contract review
+- [x] Home (feed)
+- [x] Offer creation
+- [x] Request creation/review
 - [ ] Receipts
 - [ ] Messages
 - [ ] Profile
