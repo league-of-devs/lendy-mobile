@@ -22,6 +22,7 @@ export default function Sidebar(props) {
         style={[Styles.container]}
         forceInset={{ top: 'always', horizontal: 'never' }} >
         <Logo style={{ transform: [ { scale: 0.35 } ] }}/>
+        <Button style={Styles.sideBarButton} onPress={() => navigation.navigate('Main')} textColor='#fff' color={Colors.cyan} inverse text='Home' />
         <Button style={Styles.sideBarButton} onPress={() => navigation.navigate('Profile')} textColor='#fff' color={Colors.cyan} inverse text='Perfil' />
         <Button style={Styles.sideBarButton} onPress={() => navigation.navigate('Profile')} textColor='#fff' color={Colors.cyan} text='Fale conosco' />
         <Button style={Styles.sideBarButton} onPress={() => navigation.navigate('Profile')} textColor='#fff' color={Colors.cyan} text='Quem somos' />
