@@ -5,12 +5,14 @@ import Login from './Screens/Login'
 import Signup from './Screens/Signup'
 import Home from './Screens/Home'
 import Sidebar from './Navigation/Sidebar'
+import CreateItem from './Screens/CreateItem'
 
 const Routes = createAppContainer(
   createDrawerNavigator({
     Login,
     Signup,
-    Main: Home
+    Main: Home,
+    CreateItem
   }, {
     initialRouteName: 'Login',
     headerMode: '',
