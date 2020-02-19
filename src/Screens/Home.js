@@ -92,7 +92,7 @@ export default function Home({ navigation }) {
             <View>
               <Text style={[Styles.text, Styles.white, Styles.big]}>
                 <Text style={Styles.semiBold}>
-                  {myOffers.length > 0 ? `Boas notícias, ${userState.name.split(' ')[0]}!` : `Sinto muito, ${userState.name.split(' ')[0]}...`}
+                  {offers.length > 0 ? `Boas notícias, ${userState.name.split(' ')[0]}!` : `Sinto muito, ${userState.name.split(' ')[0]}...`}
                 </Text>
               </Text>
               <Text style={[Styles.text, Styles.white, Styles.big]}>
