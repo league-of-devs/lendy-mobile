@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { StyleSheet } from 'react-native'
 import Routes from './src/Routes'
 import { SplashScreen } from 'expo'
 import * as Font from 'expo-font'
+import { Provider } from 'react-redux'
+import store from './src/Store'
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false)
@@ -20,10 +21,11 @@ export default function App() {
     })
   }, [])
 
-
   if (fontsLoaded)
     return (
-      <Routes />
+      <Provider store={store}>
+        <Routes />
+      </Provider>
     )
 
   return null
