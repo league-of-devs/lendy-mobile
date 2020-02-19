@@ -4,7 +4,27 @@ import Colors from './colors.js'
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: StatusBar.currentHeight
+    paddingTop: StatusBar.currentHeight + 15
+  },
+
+  cyanContainer: {
+    flex: 1,
+    paddingTop: StatusBar.currentHeight + 15,
+    backgroundColor: Colors.cyan
+  }, 
+
+  verticalCenter: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    marginBottom: 100
+  },  
+
+  scrollPage: {
+    width: Dimensions.get('screen').width,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column'
   },
 
   start: {
@@ -16,7 +36,8 @@ const Styles = StyleSheet.create({
   },
 
   center: {
-    alignSelf: 'center'
+    alignSelf: 'center',
+    textAlign: 'center'
   }, 
 
   stretch: {
@@ -108,11 +129,25 @@ const Styles = StyleSheet.create({
     fontSize: 18,
   },
 
+  rowFlex: {
+    flexDirection: 'row'
+  },
+
   button: {
     height: 45,
     borderRadius: 100,
     elevation: 5,
     minWidth: 120
+  },
+
+  iconButton: {
+    borderRadius: 100,
+    elevation: 5,
+    width: 40,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: 5
   },
 
   buttonText: {
